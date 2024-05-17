@@ -1,21 +1,3 @@
-// 검색 관련
-const searchEl = document.querySelector(".search");
-const searchInputEl = searchEl.querySelector("input");
-
-searchEl.addEventListener("click", function () {
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener("focus", function () {
-  searchEl.classList.add("focused");
-  searchInputEl.setAttribute("placeholder", "통합검색");
-});
-
-searchInputEl.addEventListener("blur", function () {
-  searchEl.classList.remove("focused");
-  searchInputEl.setAttribute("placeholder", "");
-});
-
 // 배지 & 탑버튼 관련
 const badgeEl = document.querySelector("header .badges");
 const toTopEl = document.querySelector("#to-top");
@@ -152,10 +134,3 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, "show") // 요소가 화면에 보이면 show 클래스 추가
     .addTo(new ScrollMagic.Controller()); // 컨트롤러에 장면을 할당(필수!)
 });
-
-// 카피라이트 연도 관련
-const thisYear = document.querySelector(".this-year");
-thisYear.textContent = new Date().getFullYear();
-
-// 드롭다운  메뉴 관련
-const dropdownEl = document.querySelector(".main-menu");
